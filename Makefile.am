@@ -34,12 +34,11 @@ lsusb_SOURCES = \
 	usbmisc.c usbmisc.h
 
 lsusb_CPPFLAGS = \
-	$(AM_CPPFLAGS) $(LIBUSB_CFLAGS) $(UDEV_CFLAGS) \
+	$(AM_CPPFLAGS) $(LIBUSB_CFLAGS) \
 	-DDATADIR=\"$(datadir)\"
 
 lsusb_LDADD = \
-	$(LIBUSB_LIBS) \
-	$(UDEV_LIBS)
+	$(LIBUSB_LIBS)
 
 usbreset_SOURCES = \
 	usbreset.c
