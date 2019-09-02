@@ -24,6 +24,7 @@ Build instructions remain the same.
 * Not currently tested on Windows / WSL / Ubuntu on Windows (coming soon)
 * `lsusb` plain works well on Mac
 * `lsusb -v` works well, minus any `sysfs` reads
+* `usbhid-dump` default mode works
 
 ### What's not
 * `lsusb -t` does NOT work due to a hard dependency on `sysfs`

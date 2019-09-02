@@ -85,6 +85,8 @@ uhd_iface_detach(uhd_iface *iface)
     err = libusb_detach_kernel_driver(iface->dev->handle, iface->number);
     if (err == LIBUSB_SUCCESS)
         iface->detached = true;
+    else if (err == LIBUSB_ERROR_NOT_SUPPORTED)
+        ;
     else if (err != LIBUSB_ERROR_NOT_FOUND)
         return err;
 
