@@ -8,6 +8,8 @@
 #ifndef _NAMES_H
 #define _NAMES_H
 
+#include <sys/types.h>
+
 /* ---------------------------------------------------------------------- */
 
 extern const char *names_vendor(uint16_t vendorid);
@@ -31,8 +33,6 @@ extern int get_vendor_string(char *buf, size_t size, uint16_t vid);
 extern int get_product_string(char *buf, size_t size, uint16_t vid, uint16_t pid);
 extern int get_class_string(char *buf, size_t size, uint8_t cls);
 extern int get_subclass_string(char *buf, size_t size, uint8_t cls, uint8_t subcls);
-
-extern int read_sysfs_prop(char *buf, size_t size, uint8_t bnum, uint8_t pnum, char *propname);
 
 extern int names_init(void);
 extern void names_exit(void);
