@@ -7,8 +7,8 @@
 SUBDIRS = \
 	usbhid-dump
 
-AM_LDFLAGS = \
-	-Wl,--as-needed
+#AM_LDFLAGS = \
+#	-Wl,--as-needed
 
 data_DATA =
 
@@ -21,8 +21,8 @@ bin_SCRIPTS = \
 	usb-devices \
 	lsusb.py
 
-noinst_PROGRAMS = \
-	usbreset
+#noinst_PROGRAMS = \
+#	usbreset
 
 lsusb_SOURCES = \
 	lsusb.c lsusb.h \
@@ -40,8 +40,8 @@ lsusb_CPPFLAGS = \
 lsusb_LDADD = \
 	$(LIBUSB_LIBS)
 
-usbreset_SOURCES = \
-	usbreset.c
+#usbreset_SOURCES = \
+#	usbreset.c
 
 if HAVE_ZLIB
 lsusb_CPPFLAGS += -DHAVE_LIBZ
@@ -61,7 +61,6 @@ EXTRA_DIST = \
 	usb-devices.1.in \
 	usb-devices \
 	lsusb.py.in \
-	usbreset.c \
 	LICENSES/GPL-2.0.txt \
 	LICENSES/GPL-3.0.txt
 
