@@ -34,7 +34,7 @@ extern int get_product_string(char *buf, size_t size, uint16_t vid, uint16_t pid
 extern int get_class_string(char *buf, size_t size, uint8_t cls);
 extern int get_subclass_string(char *buf, size_t size, uint8_t cls, uint8_t subcls);
 
-extern int names_init(void);
+extern int names_init(char *n);
 extern void names_exit(void);
 
 /* ---------------------------------------------------------------------- */

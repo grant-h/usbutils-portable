@@ -3833,9 +3833,16 @@ int main(int argc, char *argv[])
 
 
 	/* by default, print names as well as numbers */
-	if (names_init() < 0)
-		fprintf(stderr, "unable to initialize usb spec");
-
+	err = names_init(DATADIR "/usb.ids");
+#ifdef HAVE_LIBZ
+	if (err != 0)
+		err = names_init(DATADIR "/usb.ids.gz");
+#endif
+	if (err != 0)
+		fprintf(stderr, "%s: cannot open \"%s\", %s\n",
+				argv[0],
+				DATADIR "/usb.ids",
+				strerror(err));
 	status = 0;
 
 	if (treemode) {
