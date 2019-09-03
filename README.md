@@ -32,6 +32,17 @@ Build instructions remain the same.
 
 ## Building and installing
 
+### Installing on Mac
+
+```
+brew tap grant-h/usbutils
+brew install --HEAD usbutils
+```
+
+Currently the [formula](https://github.com/grant-h/homebrew-usbutils) is HEAD only (meaning Homebrew must compile it). Bottles may be coming soon to avoid the dependency on autotools/automake.
+
+### Custom build / install
+
 Note, usbutils depends on libusb, be sure that library is properly
 installed first.
 
