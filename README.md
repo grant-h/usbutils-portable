@@ -30,6 +30,10 @@ Build instructions remain the same.
 * `lsusb -t` does NOT work due to a hard dependency on `sysfs`
 * `usbreset` does NOT work as it depends on `sysfs`
 
+### Comparison to other Mac lsusb ports
+* https://github.com/mikhailai/homebrew-misc/blob/master/usbutils.rb - Currently limited to the 2013 version of `lsusb` due to no `udev` removal patch
+* https://github.com/jlhonora/lsusb - A bash script that can't support `lsusb -v`
+
 ## Building and installing
 
 ### Installing on Mac
